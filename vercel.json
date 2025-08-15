@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "name": "nnote-app",
+  "build": {
+    "env": {
+      "VITE_API_URL": "https://nnote-backend.vercel.app/api",
+      "VITE_GOOGLE_CLIENT_ID": "972025242560-p6plkeko3463fnh9aogr676i8busu5ta.apps.googleusercontent.com"
+    }
+  },
+  "installCommand": "npm install && npm install --prefix backend",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "functions": {
+    "backend/server.js": {
+      "runtime": "nodejs18.x",
+      "memory": 1024,
+      "maxDuration": 10,
+      "includeFiles": ["backend/**"],
+      "env": {
+        "PORT": "3001",
+        "NODE_ENV": "production",
+        "CLOUD_NAME": "@cloud_name",
+        "API_KEY": "@api_key",
+        "API_SECRET": "@api_secret",
+        "DATABASE_URL": "@database_url"
+      }
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "backend/server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/dist/$1"
+    }
+  ]
+}
