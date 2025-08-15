@@ -15,15 +15,7 @@
       "runtime": "nodejs18.x",
       "memory": 1024,
       "maxDuration": 10,
-      "includeFiles": ["backend/**"],
-      "env": {
-        "PORT": "3001",
-        "NODE_ENV": "production",
-        "CLOUD_NAME": "@cloud_name",
-        "API_KEY": "@api_key",
-        "API_SECRET": "@api_secret",
-        "DATABASE_URL": "@database_url"
-      }
+      "includeFiles": ["backend/**"]
     }
   },
   "routes": [
