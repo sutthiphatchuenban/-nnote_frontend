@@ -1,12 +1,6 @@
 {
   "version": 2,
   "name": "nnote-app",
-  "build": {
-    "env": {
-      "VITE_API_URL": "https://nnote-backend.vercel.app/api",
-      "VITE_GOOGLE_CLIENT_ID": "972025242560-p6plkeko3463fnh9aogr676i8busu5ta.apps.googleusercontent.com"
-    }
-  },
   "installCommand": "npm install",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
@@ -14,4 +8,5 @@
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
+
 
