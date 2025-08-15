@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure proper theme initialization */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styles */
+html.dark {
+  color-scheme: dark;
+}
+
+html:not(.dark) {
+  color-scheme: light;
+}
+
+/* Color Theme Variables */
+:root {
+  --color-primary: blue;
+  --color-secondary: gray;
+  --color-accent: green;
+}
+
+/* Theme-specific styles */
+.theme-default {
+  --tw-color-primary: theme('colors.blue.500');
+  --tw-color-accent: theme('colors.green.500');
+}
+
+.theme-blue {
+  --tw-color-primary: theme('colors.blue.500');
+  --tw-color-accent: theme('colors.cyan.500');
+}
+
+.theme-green {
+  --tw-color-primary: theme('colors.green.500');
+  --tw-color-accent: theme('colors.emerald.500');
+}
+
+.theme-purple {
+  --tw-color-primary: theme('colors.purple.500');
+  --tw-color-accent: theme('colors.violet.500');
+}
+
+.theme-pink {
+  --tw-color-primary: theme('colors.pink.500');
+  --tw-color-accent: theme('colors.rose.500');
+}
+
+.theme-orange {
+  --tw-color-primary: theme('colors.orange.500');
+  --tw-color-accent: theme('colors.amber.500');
+}
+
+.theme-red {
+  --tw-color-primary: theme('colors.red.500');
+  --tw-color-accent: theme('colors.rose.500');
+}
+
+.theme-indigo {
+  --tw-color-primary: theme('colors.indigo.500');
+  --tw-color-accent: theme('colors.blue.500');
+}
+
+/* Dynamic theme classes */
+.theme-primary {
+  @apply text-blue-600 dark:text-blue-400;
+}
+
+.theme-blue .theme-primary {
+  @apply text-blue-600 dark:text-blue-400;
+}
+
+.theme-green .theme-primary {
+  @apply text-green-600 dark:text-green-400;
+}
+
+.theme-purple .theme-primary {
+  @apply text-purple-600 dark:text-purple-400;
+}
+
+.theme-pink .theme-primary {
+  @apply text-pink-600 dark:text-pink-400;
+}
+
+.theme-orange .theme-primary {
+  @apply text-orange-600 dark:text-orange-400;
+}
+
+.theme-red .theme-primary {
+  @apply text-red-600 dark:text-red-400;
+}
+
+.theme-indigo .theme-primary {
+  @apply text-indigo-600 dark:text-indigo-400;
+}
+
+/* Button themes */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white;
+}
+
+.theme-green .btn-primary {
+  @apply bg-green-600 hover:bg-green-700;
+}
+
+.theme-purple .btn-primary {
+  @apply bg-purple-600 hover:bg-purple-700;
+}
+
+.theme-pink .btn-primary {
+  @apply bg-pink-600 hover:bg-pink-700;
+}
+
+.theme-orange .btn-primary {
+  @apply bg-orange-600 hover:bg-orange-700;
+}
+
+.theme-red .btn-primary {
+  @apply bg-red-600 hover:bg-red-700;
+}
+
+.theme-indigo .btn-primary {
+  @apply bg-indigo-600 hover:bg-indigo-700;
+}
+
+/* Accent colors */
+.theme-accent {
+  @apply text-green-600 dark:text-green-400;
+}
+
+.theme-blue .theme-accent {
+  @apply text-cyan-600 dark:text-cyan-400;
+}
+
+.theme-green .theme-accent {
+  @apply text-emerald-600 dark:text-emerald-400;
+}
+
+.theme-purple .theme-accent {
+  @apply text-violet-600 dark:text-violet-400;
+}
+
+.theme-pink .theme-accent {
+  @apply text-rose-600 dark:text-rose-400;
+}
+
+.theme-orange .theme-accent {
+  @apply text-amber-600 dark:text-amber-400;
+}
+
+.theme-red .theme-accent {
+  @apply text-rose-600 dark:text-rose-400;
+}
+
+.theme-indigo .theme-accent {
+  @apply text-blue-600 dark:text-blue-400;
+}
