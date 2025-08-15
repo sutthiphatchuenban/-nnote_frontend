@@ -7,10 +7,11 @@
       "VITE_GOOGLE_CLIENT_ID": "972025242560-p6plkeko3463fnh9aogr676i8busu5ta.apps.googleusercontent.com"
     }
   },
-  "installCommand": "npm install && npm install --prefix backend",
+  "installCommand": "npm install",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
+
